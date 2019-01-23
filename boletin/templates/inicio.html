@@ -1,0 +1,15 @@
+{{saludo}}
+<hr/>
+<br/>
+
+{% if form %}
+<form method="POST" action="" action="">{% csrf_token %}
+<!--  {% csrf_token %} Esto es muy importante por Seguridadpara que no aparezca el link y se pueda hackear por SQLInyection -->
+<!-- formulario es el nombre que se define en views en ell contexto -->
+<!-- formulario.as_p  esto permite los casmpos  del formulario commo párrafos, sino basta con porner solo formulario -->
+
+
+	{{formulario.as_p}}
+	<input type= 'submit' value='Regístrame'/>
+</form>
+{% endif %}
